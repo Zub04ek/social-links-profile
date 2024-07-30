@@ -1,0 +1,174 @@
+@font-face {
+  font-family: 'Inter-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Inter'), url('../assets/fonts/static/Inter-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Inter-SemiBold';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Inter'), url('../assets/fonts/static/Inter-SemiBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Inter-Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Inter'), url('../assets/fonts/static/Inter-Bold.ttf') format('truetype');
+}
+
+:root {
+  --body-background-color: #141414;
+  --profile-background-color: #1f1f1f;
+  --link-background-color: #333333;
+  --text-color: #ffffff;
+  --hover-color: #c5f82a;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Inter-Regular', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  background-color: var(--body-background-color);
+  color: var(--text-color);
+  display: flex;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*- min padding = 8px;
+    - max padding = 24px; */
+  padding: 0 clamp(0.5rem, -0.167rem + 7.11vw, 1.5rem);
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  /* 
+    - min padding = 24px;
+    - max padding = 30px; */
+  padding: clamp(1.5rem, 1.393rem + 0.54vw, 1.875rem);
+
+  /* 
+    - min card width = 327px;
+    - max card width = 368px; 
+  
+    I used min() function to make width of the card more responsive when the viewport width are less then 375px */
+  width: min(100%, clamp(20.438rem, 19.535rem + 3.85vw, 23rem));
+  background-color: var(--profile-background-color);
+  border-radius: 10px;
+}
+
+.profile > img {
+  border-radius: 50%;
+}
+
+.user_info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+
+.user_name {
+  font-family: 'Inter-SemiBold', sans-serif;
+  /* 
+  - min font size = 22px;
+  - max font size = 24px; */
+  font-size: clamp(1.375rem, 1.331rem + 0.19vw, 1.5rem);
+}
+
+.user_location {
+  font-family: 'Inter-Bold', sans-serif;
+  color: var(--hover-color);
+  /* 
+  - min font size = 13px;
+  - max font size = 14px; */
+  font-size: clamp(0.813rem, 0.79rem + 0.09vw, 0.875rem);
+}
+
+.profile > p {
+  /* 
+  - min font size = 13px;
+  - max font size = 14px; */
+  font-size: clamp(0.813rem, 0.79rem + 0.09vw, 0.875rem);
+  text-align: center;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+.socials > li {
+  width: 100%;
+}
+.socials > li > a {
+  display: block;
+  padding: 12px 0;
+  color: var(--text-color);
+  font-family: 'Inter-Bold', sans-serif;
+  /* 
+  - min font size = 12px;
+  - max font size = 13px; */
+  font-size: clamp(0.75rem, 0.728rem + 0.09vw, 0.813rem);
+  background-color: var(--link-background-color);
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.socials > li > a:hover,
+.socials > li > a:focus {
+  color: var(--body-background-color);
+  background-color: var(--hover-color);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 16px 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--hover-color);
+}
