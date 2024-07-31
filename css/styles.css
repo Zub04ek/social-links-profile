@@ -75,11 +75,11 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 26px;
   /* 
     - min padding = 24px;
-    - max padding = 30px; */
-  padding: clamp(1.5rem, 1.393rem + 0.54vw, 1.875rem);
+    - max padding = 40px; */
+  padding: clamp(1.5rem, 1.148rem + 1.5vw, 2.5rem);
 
   /* 
     - min card width = 327px;
@@ -132,7 +132,7 @@ a {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 14px;
+  gap: 16px;
   width: 100%;
 }
 .socials > li {
@@ -140,13 +140,13 @@ a {
 }
 .socials > li > a {
   display: block;
-  padding: 12px 0;
+  padding: 14px 0;
   color: var(--text-color);
   font-family: 'Inter-Bold', sans-serif;
   /* 
   - min font size = 12px;
-  - max font size = 13px; */
-  font-size: clamp(0.75rem, 0.728rem + 0.09vw, 0.813rem);
+  - max font size = 14px; */
+  font-size: clamp(0.75rem, 0.706rem + 0.19vw, 0.875rem);
   background-color: var(--link-background-color);
   border-radius: 8px;
   text-align: center;
@@ -170,5 +170,12 @@ footer {
   text-align: center;
 }
 .attribution a {
+  font-family: 'Inter-SemiBold', sans-serif;
+  color: var(--text-color);
+  text-decoration: underline;
+  transition: color 0.3s ease-in-out;
+}
+.attribution a:hover, 
+.attribution a:focus {
   color: var(--hover-color);
 }
