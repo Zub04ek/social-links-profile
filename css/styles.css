@@ -75,7 +75,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 26px;
+  gap: 28px;
   /* 
     - min padding = 24px;
     - max padding = 40px; */
@@ -120,7 +120,14 @@ a {
   font-size: clamp(0.813rem, 0.79rem + 0.09vw, 0.875rem);
 }
 
-.profile > p {
+.links_box {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  width: 100%;
+}
+
+.links_box > p {
   /* 
   - min font size = 13px;
   - max font size = 14px; */
@@ -133,7 +140,6 @@ a {
   align-items: center;
   flex-direction: column;
   gap: 16px;
-  width: 100%;
 }
 .socials > li {
   width: 100%;
@@ -147,6 +153,7 @@ a {
   - min font size = 12px;
   - max font size = 14px; */
   font-size: clamp(0.75rem, 0.706rem + 0.19vw, 0.875rem);
+  line-height: 1.286;
   background-color: var(--link-background-color);
   border-radius: 8px;
   text-align: center;
